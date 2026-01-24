@@ -1,0 +1,106 @@
+/* Estilos Generales */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background-color: #f4f7f6;
+    color: #333;
+    line-height: 1.6;
+}
+
+/* Navegación Responsiva */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #2c3e50;
+    color: white;
+    padding: 1rem 5%;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.nav-links {
+    display: flex;
+    list-style: none;
+}
+
+.nav-links li a {
+    color: white;
+    text-decoration: none;
+    margin-left: 20px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.nav-links li a:hover {
+    color: #3498db;
+}
+
+/* Sección Hero */
+.hero {
+    background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), 
+                url('https://images.unsplash.com/photo-1517694712202-14dd9538aa97');
+    background-size: cover;
+    background-position: center;
+    height: 60vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: white;
+}
+
+.hero h1 { font-size: 3rem; margin-bottom: 10px; }
+
+/* Contenedor de Tarjetas */
+.container {
+    padding: 2rem 5%;
+}
+
+.card-section {
+    display: flex;
+    flex-wrap: wrap; /* Esto hace que se baje en móviles */
+    gap: 20px;
+    justify-content: center;
+}
+
+.card {
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    width: 300px;
+    padding: 15px;
+    text-align: center;
+    transition: transform 0.3s;
+}
+
+.card:hover { transform: translateY(-10px); }
+
+.card img {
+    width: 100%;
+    border-radius: 5px;
+    margin-bottom: 15px;
+}
+
+/* Footer */
+footer {
+    background: #2c3e50;
+    color: white;
+    text-align: center;
+    padding: 2rem;
+    margin-top: 20px;
+}
+
+/* MEDIA QUERIES (Para Celulares) */
+@media (max-width: 768px) {
+    .navbar { flex-direction: column; }
+    .nav-links { margin-top: 10px; }
+    .hero h1 { font-size: 2rem; }
+    .card { width: 100%; } /* Las tarjetas ocupan todo el ancho en móvil */
+}
